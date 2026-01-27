@@ -130,10 +130,10 @@ function showSecondScreen() {
       // change background to villa image and show butterfly animation
       document.body.classList.add('final-screen');
       document.body.innerHTML = '';
-      playOceanWaves();
       displayButterflyAnimation(3);
       showText();
       displayCatBouquet();
+      playOceanWaves();
     } else {
       // Generic error message without revealing which answer is wrong
       alert('One or more answers are incorrect. Please try again.');
@@ -176,7 +176,7 @@ function showText() {
 
 function playVisitorQ() {
   let theme = new Audio('assets/visitor_q_trim.mp3');
-  theme.volume = 0.6;
+  theme.volume = 0.5;
   theme.play();
 }
 
