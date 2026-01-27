@@ -114,10 +114,10 @@ function showSecondScreen() {
 
     // Correct answers (case-insensitive comparison)
     const correctAnswers = {
-      1: 's',//'Nom Akor Tnout',
-      2: 's',//'Koh Rong Sanloem',
-      3: 's',//'Sora',
-      4: 's',//'snake'
+      1: 'Nom Akor Tnout',
+      2: 'Koh Rong Sanloem',
+      3: 'Sora',
+      4: 'snake'
     };
     // Check answers (case-insensitive)
     const isCorrect = 
