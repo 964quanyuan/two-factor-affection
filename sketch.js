@@ -130,6 +130,7 @@ function showSecondScreen() {
       // change background to villa image and show butterfly animation
       document.body.classList.add('final-screen');
       document.body.innerHTML = '';
+      playOceanWaves();
       displayButterflyAnimation(3);
       showText();
       displayCatBouquet();
@@ -156,6 +157,7 @@ function showText() {
   yesButton1.textContent = 'yes';
   yesButton1.addEventListener('click', function() {
     displayCouple();
+    playVisitorQ();
   });
   
   // Create second "yes" button
@@ -164,6 +166,7 @@ function showText() {
   yesButton2.textContent = 'yes';
   yesButton2.addEventListener('click', function() {
     displayCouple();
+    playBreeze();
   });
   
   buttonContainer.appendChild(yesButton1);
@@ -171,11 +174,27 @@ function showText() {
   document.body.appendChild(buttonContainer);
 }
 
+function playVisitorQ() {
+  let theme = new Audio('assets/visitor_q_trim.mp3');
+  theme.volume = 0.7;
+  theme.play();
+}
+
+function playVisitorQ() {
+  let theme = new Audio('assets/breeze_trim.mp3');
+  theme.volume = 0.7;
+  theme.play();
+}
+
+function playOceanWaves() {
+  let ocean = new Audio('assets/ocean.mp3');
+  ocean.loop = true;
+  ocean.volume = 0.5;
+  ocean.play();
+}
+
 function displayCouple() {
   document.body.innerHTML = '';
-  let sound = new Audio('assets/visitor_q_trim.mp3');
-  sound.play();
-
   const couple = document.createElement('img');
   couple.src = 'assets/backshot.png';
   couple.className = 'couple-image';
