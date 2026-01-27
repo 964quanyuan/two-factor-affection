@@ -165,8 +165,7 @@ body {
   object-fit: contain;
   position: fixed;
   left: calc(50% - clamp(80px, 14vw, 200px) - 25px - clamp(200px, 25vw, 400px));
-  top: 55%;
-  transform: translateY(-50%);
+  top: 18%;
   z-index: 100;
 }
 
