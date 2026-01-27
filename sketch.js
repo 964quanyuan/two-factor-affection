@@ -173,6 +173,9 @@ function showText() {
 
 function displayCouple() {
   document.body.innerHTML = '';
+  let sound = new Audio('assets/visitor_q_trim.mp3');
+  sound.play();
+
   const couple = document.createElement('img');
   couple.src = 'assets/backshot.png';
   couple.className = 'couple-image';
