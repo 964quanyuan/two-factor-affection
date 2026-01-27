@@ -353,7 +353,7 @@ body {
 .couple-image{
   position: fixed;
   left: 50%;
-  top: 19%;
+  top: 22%;
   transform: translateX(-50%);
   max-width: 300px;
   max-height: 600px;
