@@ -340,8 +340,8 @@ body {
 
 .cat-bouquet-image {
   position: fixed;
-  right: 20%;
-  top: 67%;
+  right: 24%;
+  top: 68%;
   transform: translateY(-50%);
   max-width: 300px;
   max-height: 460px;
@@ -354,8 +354,8 @@ body {
   left: 50%;
   top: 22%;
   transform: translateX(-50%);
-  max-width: 300px;
-  max-height: 600px;
+  max-width: 310px;
+  max-height: 620px;
   object-fit: contain;
 }
 
