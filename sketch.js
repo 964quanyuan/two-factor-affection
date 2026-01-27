@@ -176,11 +176,11 @@ function showText() {
 
 function playVisitorQ() {
   let theme = new Audio('assets/visitor_q_trim.mp3');
-  theme.volume = 0.7;
+  theme.volume = 0.6;
   theme.play();
 }
 
-function playVisitorQ() {
+function playBreeze() {
   let theme = new Audio('assets/breeze_trim.mp3');
   theme.volume = 0.7;
   theme.play();
@@ -189,7 +189,7 @@ function playVisitorQ() {
 function playOceanWaves() {
   let ocean = new Audio('assets/ocean.mp3');
   ocean.loop = true;
-  ocean.volume = 0.5;
+  ocean.volume = 0.4;
   ocean.play();
 }
 
