@@ -164,7 +164,7 @@ body {
   height: auto;
   object-fit: contain;
   position: fixed;
-  left: calc(50% - clamp(80px, 14vw, 200px) - 20px - clamp(200px, 25vw, 400px));
+  left: calc(50% - clamp(80px, 14vw, 200px) - 25px - clamp(200px, 25vw, 400px));
   top: 50%;
   transform: translateY(-50%);
   z-index: 100;
@@ -174,7 +174,7 @@ body {
   display: none;
   position: fixed;
   top: 18%;
-  left: calc(50% + clamp(160px, 24vw, 400px) + 20px);
+  left: calc(50% - clamp(80px, 14vw, 200px) + 540px + 25px);
   width: clamp(200px, 20vw, 300px);
   background: transparent;
   z-index: 1001;
@@ -348,6 +348,16 @@ body {
   max-height: 460px;
   object-fit: contain;
   z-index: 999;
+}
+
+.couple-image{
+  position: fixed;
+  left: 50%;
+  top: 19%;
+  transform: translateX(-50%);
+  max-width: 300px;
+  max-height: 600px;
+  object-fit: contain;
 }
 
 .butterfly-animation {

@@ -155,7 +155,7 @@ function showText() {
   yesButton1.className = 'yes-button';
   yesButton1.textContent = 'yes';
   yesButton1.addEventListener('click', function() {
-    document.body.innerHTML = '';
+    displayCouple();
   });
   
   // Create second "yes" button
@@ -163,12 +163,20 @@ function showText() {
   yesButton2.className = 'yes-button';
   yesButton2.textContent = 'yes';
   yesButton2.addEventListener('click', function() {
-    document.body.innerHTML = '';
+    displayCouple();
   });
   
   buttonContainer.appendChild(yesButton1);
   buttonContainer.appendChild(yesButton2);
   document.body.appendChild(buttonContainer);
+}
+
+function displayCouple() {
+  document.body.innerHTML = '';
+  const couple = document.createElement('img');
+  couple.src = 'assets/backshot.png';
+  couple.className = 'couple-image';
+  document.body.appendChild(couple);
 }
 
 function displayCatBouquet() {
