@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>terms and conditions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- p5 will inject the canvas -->
+    <div id="captchaContainer">
+      <div class="captcha-checkbox-group">
+        <input type="checkbox" id="captchaCheckbox" />
+        <label for="captchaCheckbox" class="captcha-label">I'm not a robot</label>
+        <img src="assets/logo.png" class="captcha-logo" />
+      </div>
+    </div>
+    <div id="captchaDialogue">
+      <div class="dialogue-arrow"></div>
+      <p class="question-text">Select the correct answer.</p>
+      <img id="mbe_captcha" src="assets/mbe_captcha.jpg" />
+      <div class="answer-choices">
+        <div class="answer-wrapper">
+          <img src="assets/mbe_a.jpg" class="answer-choice" data-answer="a" />
+          <div class="answer-marker">✓</div>
+        </div>
+        <div class="answer-wrapper">
+          <img src="assets/mbe_b.jpg" class="answer-choice" data-answer="b" />
+          <div class="answer-marker">✓</div>
+        </div>
+        <div class="answer-wrapper">
+          <img src="assets/mbe_c.jpg" class="answer-choice" data-answer="c" />
+          <div class="answer-marker">✓</div>
+        </div>
+        <div class="answer-wrapper">
+          <img src="assets/mbe_d.jpg" class="answer-choice" data-answer="d" />
+          <div class="answer-marker">✓</div>
+        </div>
+      </div>
+      <button id="verifyButton">Verify</button>
+      <img id="huskyImage" src="assets/husky-pointing.png" />
+      <div class="try-again-container">
+        <p id="tryAgainMessage">try again</p>
+      </div>
+    </div>
+    <div id="hintBox">
+      <p id="hintText">Hint: under common law, burglary requires breaking and entering the dwelling of another at night with intent to commit a felony inside. Here, the defendant gained entry to the unit through threats with a gun (constructive breaking, as consent under duress doesn't negate the unlawful entry), it was evening (presumed nighttime), the condominium unit qualifies as a dwelling, and the intent was to steal (a felony).</p>
+      <p id="hintText">Felony murder requires the death to occur during the commission of the underlying felony (e.g., burglary or robbery) or immediate flight. The problem specifies the heart attack happened after the defendant was arrested, meaning the crimes and flight had ended. There is no other basis for murder (e.g., no intent to kill).</p>
+    </div>
+    <div id="secondScreen">
+      <div class="security-questions-container">
+        <h2 class="second-screen-title">Security Questions</h2>
+        <div class="question-input-group">
+          <label for="question1" class="question-label">Question 1: What is Quan's favorite Khmer breakfast item?</label>
+          <input type="text" id="question1" class="security-input" />
+        </div>
+        <div class="question-input-group">
+          <label for="question2" class="question-label">Question 2: Which island were you on at the end of 2025?</label>
+          <input type="text" id="question2" class="security-input" />
+        </div>
+        <div class="question-input-group">
+          <label for="question3" class="question-label">Question 3: What is the name of the bar Quan took you to on your birthday?</label>
+          <input type="text" id="question3" class="security-input" />
+        </div>
+        <div class="question-input-group">
+          <label for="question4" class="question-label">Question 4: What is your Chinese Zodiac sign?</label>
+          <input type="text" id="question4" class="security-input" />
+        </div>
+        <button id="submitButton" class="submit-button">Submit</button>
+      </div>
+    </div>
+    <script src="sketch.js"></script>
+  </body>
+</html>
