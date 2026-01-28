@@ -181,6 +181,7 @@ body {
   position: fixed;
   top: 18%;
   left: calc(50% - clamp(80px, 14vw, 200px) + 540px + 25px);
+  right: 92%;
   width: clamp(200px, 20vw, 300px);
   background: transparent;
   z-index: 1001;
