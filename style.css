@@ -62,7 +62,7 @@ body {
   position: fixed;
   display: none;
   top: 18%;
-  left: calc(50% - clamp(80px, 14vw, 200px));
+  left: calc(50% - clamp(91px, 16vw, 220px));
   background: white;
   padding: clamp(10px, 1.5vw, 20px);
   border-radius: clamp(5px, 0.8vw, 10px);
@@ -74,7 +74,7 @@ body {
 .dialogue-arrow {
   position: absolute;
   top: -9px;
-  left: 50px;
+  left: 90px;
   transform: translateX(-50%);
   width: 0;
   height: 0;
@@ -171,7 +171,7 @@ body {
   height: auto;
   object-fit: contain;
   position: fixed;
-  left: calc(50% - clamp(80px, 14vw, 200px) - 25px - clamp(200px, 25vw, 400px));
+  left: calc(50% - clamp(91px, 16vw, 220px) - 25px - clamp(200px, 25vw, 400px));
   top: 18%;
   z-index: 100;
 }
@@ -180,8 +180,8 @@ body {
   display: none;
   position: fixed;
   top: 18%;
-  left: calc(50% - clamp(80px, 14vw, 200px) + 540px + 25px);
-  right: 92%;
+  left: calc(50% - clamp(91px, 16vw, 220px) + 540px + 25px);
+  right: 5%;
   background: transparent;
   z-index: 1001;
 }
