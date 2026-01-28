@@ -127,11 +127,11 @@ function showSecondScreen() {
       answer4.toLowerCase() === correctAnswers[4].toLowerCase();
     
     if (isCorrect) {
+      playOceanWaves();
       // change background to villa image and show butterfly animation
       document.body.style.visibility = 'hidden'; // Reveal after loading images
       document.body.innerHTML = '';
       displayButterflyAnimation(3);
-      playOceanWaves();
       showText();
       displayCatBouquet();
       displayVilla();
