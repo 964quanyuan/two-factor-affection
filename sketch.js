@@ -126,16 +126,13 @@ function showSecondScreen() {
       answer3.toLowerCase() === correctAnswers[3].toLowerCase() &&
       answer4.toLowerCase() === correctAnswers[4].toLowerCase();
     
-    if (isCorrect) {
-      playOceanWaves();
-      // change background to villa image and show butterfly animation
-      document.body.style.visibility = 'hidden'; // Reveal after loading images
+    if (isCorrect) {      
       document.body.innerHTML = '';
       displayButterflyAnimation(3);
       showText();
       displayCatBouquet();
       displayVilla();
-      document.body.style.visibility = 'visible'; // Reveal
+      playOceanWaves();
     } else {
       // Generic error message without revealing which answer is wrong
       alert('One or more answers are incorrect. Please try again.');
