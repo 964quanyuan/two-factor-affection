@@ -147,6 +147,7 @@ function showText() {
   const textElement = document.createElement('div');
   textElement.className = 'happy-valentines-text';
   textElement.textContent = "Will you be my Valentine?";
+  textElement.style.fontFamily = 'aeiou';
   document.body.appendChild(textElement);
   
   // Create button container
