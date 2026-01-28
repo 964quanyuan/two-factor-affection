@@ -199,6 +199,7 @@ function displayCouple() {
   document.body.removeChild(document.body.getElementsByClassName('happy-valentines-text')[0]);
   document.body.removeChild(document.body.getElementsByClassName('button-container')[0]);
   document.body.removeChild(document.body.getElementsByClassName('cat-bouquet-image')[0]);
+  document.body.removeChild(document.body.getElementsByClassName('butterfly-animation')[0]);
   const couple = document.createElement('img');
   couple.src = 'assets/backshot.png';
   couple.className = 'couple-image';
