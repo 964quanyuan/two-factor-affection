@@ -131,11 +131,11 @@ function showSecondScreen() {
       document.body.style.visibility = 'hidden'; // Reveal after loading images
       document.body.innerHTML = '';
       displayButterflyAnimation(3);
+      playOceanWaves();
       showText();
       displayCatBouquet();
       displayVilla();
       document.body.style.visibility = 'visible'; // Reveal
-      playOceanWaves();
     } else {
       // Generic error message without revealing which answer is wrong
       alert('One or more answers are incorrect. Please try again.');
