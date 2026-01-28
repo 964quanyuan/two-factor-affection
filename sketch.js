@@ -128,11 +128,13 @@ function showSecondScreen() {
     
     if (isCorrect) {
       // change background to villa image and show butterfly animation
-      document.body.classList.add('final-screen');
+      document.body.style.visibility = 'hidden'; // Reveal after loading images
       document.body.innerHTML = '';
       displayButterflyAnimation(3);
       showText();
       displayCatBouquet();
+      displayVilla();
+      document.body.style.visibility = 'visible'; // Reveal
       playOceanWaves();
     } else {
       // Generic error message without revealing which answer is wrong
@@ -176,7 +178,7 @@ function showText() {
 
 function playVisitorQ() {
   let theme = new Audio('assets/visitor_q_trim.mp3');
-  theme.volume = 0.5;
+  theme.volume = 0.4;
   theme.play();
 }
 
@@ -194,7 +196,9 @@ function playOceanWaves() {
 }
 
 function displayCouple() {
-  document.body.innerHTML = '';
+  document.body.removeChild(document.body.getElementsByClassName('happy-valentines-text')[0]);
+  document.body.removeChild(document.body.getElementsByClassName('button-container')[0]);
+  document.body.removeChild(document.body.getElementsByClassName('cat-bouquet-image')[0]);
   const couple = document.createElement('img');
   couple.src = 'assets/backshot.png';
   couple.className = 'couple-image';
@@ -206,6 +210,13 @@ function displayCatBouquet() {
   catBouquet.src = 'assets/cat.gif';
   catBouquet.className = 'cat-bouquet-image';
   document.body.appendChild(catBouquet);
+}
+
+function displayVilla() {
+  const villa = document.createElement('img');
+  villa.src = 'assets/villa.jpg';
+  villa.className = 'villa-image';
+  document.body.appendChild(villa);
 }
 
 function displayButterflyAnimation(count = 1) {
