@@ -230,7 +230,7 @@ function displayButterflyAnimation(count = 1) {
     butterfly.src = 'assets/butterfly-speed.gif';
     butterfly.className = 'butterfly-animation';
     document.body.appendChild(butterfly);
-    
+    butterfly.style.height = (4**(2 + Math.random())) + 30 + 'px';
     // Store butterfly data
     butterflies.push({
       element: butterfly,
