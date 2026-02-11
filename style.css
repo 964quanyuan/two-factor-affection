@@ -3,6 +3,11 @@
   src: url('fonts/aeiou2U.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'gloria';
+  src: url('fonts/GloriaHallelujah.ttf') format('truetype');
+}
+
 html {
   background-color: rgba(10, 10, 20, 0.9); /* Base dark semi-transparent background */
   height: 100%; /* Ensures full viewport coverage */
@@ -375,6 +380,73 @@ body {
   max-width: 310px;
   max-height: 620px;
   object-fit: contain;
+}
+
+.couple-dialogue {
+  position: fixed;
+  background: white;
+  padding: 15px 30px;
+  border-radius: 50px; /* Makes it oval */
+  font-size: 16px;
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: fadeInDialogue 1s ease-in forwards;
+  z-index: 1000;
+  max-width: 200px; /* Limit width to force text wrapping */
+  text-align: center;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.couple-dialogue-left {
+  /* Anchored to top-left of couple-image */
+  /* couple-image is at left: 50%, top: 22%, max-width: 310px */
+  /* Left edge of image is at calc(50% - 155px) */
+  top: calc(22% + 0px); /* Adjust the -80px offset as needed */
+  left: calc(50% - 155px + 50px); /* Adjust the -20px offset as needed */
+  transform: translateX(-100%); /* Position to the left of anchor point */
+}
+
+.couple-dialogue-right {
+  /* Anchored to top-right of couple-image */
+  /* Right edge of image is at calc(50% + 155px) */
+  top: calc(22% + 0px); /* Adjust the -80px offset as needed */
+  left: calc(50% + 155px - 60px); /* Adjust the +20px offset as needed */
+  transform: translateX(0%); /* Position to the right of anchor point */
+}
+
+.couple-dialogue-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+/* Arrow for left dialogue - points diagonally down-right towards center of couple image */
+.couple-dialogue-left .couple-dialogue-arrow {
+  bottom: -15px;
+  right: 20px;
+  border-right: 20px solid white;
+  border-top: 8px solid transparent;
+  border-bottom: 18px solid transparent;
+}
+
+/* Arrow for right dialogue - points diagonally down-left towards center of couple image */
+.couple-dialogue-right .couple-dialogue-arrow {
+  bottom: -15px;
+  left: 20px;
+  border-left: 20px solid white;
+  border-top: 8px solid transparent;
+  border-bottom: 18px solid transparent;
+}
+
+@keyframes fadeInDialogue {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .butterfly-animation {

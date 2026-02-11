@@ -156,7 +156,7 @@ function showText() {
   yesButton1.className = 'yes-button';
   yesButton1.textContent = 'yes';
   yesButton1.addEventListener('click', function() {
-    displayCouple();
+    displayCouple('The moon is beautiful, isn\'t it?', 'It\'s daytime...');
     playVisitorQ();
   });
   
@@ -165,7 +165,7 @@ function showText() {
   yesButton2.className = 'yes-button';
   yesButton2.textContent = 'yes';
   yesButton2.addEventListener('click', function() {
-    displayCouple();
+    displayCouple('Yes, I would buy you carrots instead of flowers.','Would you still love me if I was a capybara?');
     playBreeze();
   });
   
@@ -193,7 +193,7 @@ function playOceanWaves() {
   ocean.play();
 }
 
-function displayCouple() {
+function displayCouple(leftText, rightText) {
   document.body.removeChild(document.body.getElementsByClassName('happy-valentines-text')[0]);
   document.body.removeChild(document.body.getElementsByClassName('button-container')[0]);
   document.body.removeChild(document.body.getElementsByClassName('cat-bouquet-image')[0]);
@@ -202,6 +202,39 @@ function displayCouple() {
   couple.src = 'assets/backshot.png';
   couple.className = 'couple-image';
   document.body.appendChild(couple);
+  
+  // Create left dialogue bubble
+  const dialogueLeft = document.createElement('div');
+  dialogueLeft.className = 'couple-dialogue couple-dialogue-left';
+  dialogueLeft.textContent = leftText;
+  dialogueLeft.style.fontFamily = 'gloria';
+
+  const arrowLeft = document.createElement('div');
+  arrowLeft.className = 'couple-dialogue-arrow';
+  dialogueLeft.appendChild(arrowLeft);
+  
+  // Create right dialogue bubble
+  const dialogueRight = document.createElement('div');
+  dialogueRight.className = 'couple-dialogue couple-dialogue-right';
+  dialogueRight.textContent = rightText;
+  dialogueRight.style.fontFamily = 'gloria';
+
+  if (rightText.length < 25) {
+    dialogueRight.style.animationDelay = '1.5s';
+    dialogueLeft.style.top = 'calc(22% - 60px)';
+    dialogueLeft.style.left = 'calc(50% - 155px + 80px)'; 
+  }
+  if (rightText.length > 25) {
+    dialogueLeft.style.animationDelay = '1.5s';
+    dialogueRight.style.top = 'calc(22% - 20px)';
+    dialogueRight.style.left = 'calc(50% + 155px - 70px)';
+  }
+  const arrowRight = document.createElement('div');
+  arrowRight.className = 'couple-dialogue-arrow';
+  dialogueRight.appendChild(arrowRight);
+
+  document.body.appendChild(dialogueRight);
+  document.body.appendChild(dialogueLeft);
 }
 
 function displayCatBouquet() {
