@@ -156,7 +156,7 @@ function showText() {
   yesButton1.className = 'yes-button';
   yesButton1.textContent = 'yes';
   yesButton1.addEventListener('click', function() {
-    displayCouple('The moon is beautiful, isn\'t it?', 'It\'s daytime...');
+    displayCouple('It\'s daytime...', 'The moon is beautiful, isn\'t it?');
     playVisitorQ();
   });
   
@@ -193,7 +193,7 @@ function playOceanWaves() {
   ocean.play();
 }
 
-function displayCouple(leftText, rightText) {
+function displayCouple(manText, womanText) {
   document.body.removeChild(document.body.getElementsByClassName('happy-valentines-text')[0]);
   document.body.removeChild(document.body.getElementsByClassName('button-container')[0]);
   document.body.removeChild(document.body.getElementsByClassName('cat-bouquet-image')[0]);
@@ -206,29 +206,22 @@ function displayCouple(leftText, rightText) {
   // Create left dialogue bubble
   const dialogueLeft = document.createElement('div');
   dialogueLeft.className = 'couple-dialogue couple-dialogue-left';
-  dialogueLeft.textContent = leftText;
+  dialogueLeft.textContent = manText;
   dialogueLeft.style.fontFamily = 'gloria';
 
   const arrowLeft = document.createElement('div');
   arrowLeft.className = 'couple-dialogue-arrow';
   dialogueLeft.appendChild(arrowLeft);
-  
+  if (manText.length < 25) {
+    dialogueLeft.style.top = 'calc(22% + 10px)';
+  }
   // Create right dialogue bubble
   const dialogueRight = document.createElement('div');
   dialogueRight.className = 'couple-dialogue couple-dialogue-right';
-  dialogueRight.textContent = rightText;
+  dialogueRight.textContent = womanText;
   dialogueRight.style.fontFamily = 'gloria';
-
-  if (rightText.length < 25) {
-    dialogueRight.style.animationDelay = '1.5s';
-    dialogueLeft.style.top = 'calc(22% - 60px)';
-    dialogueLeft.style.left = 'calc(50% - 155px + 80px)'; 
-  }
-  if (rightText.length > 25) {
-    dialogueLeft.style.animationDelay = '1.5s';
-    dialogueRight.style.top = 'calc(22% - 20px)';
-    dialogueRight.style.left = 'calc(50% + 155px - 70px)';
-  }
+  dialogueLeft.style.animationDelay = '1.5s';
+  
   const arrowRight = document.createElement('div');
   arrowRight.className = 'couple-dialogue-arrow';
   dialogueRight.appendChild(arrowRight);

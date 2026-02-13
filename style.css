@@ -405,15 +405,15 @@ body {
   /* couple-image is at left: 50%, top: 22%, max-width: 310px */
   /* Left edge of image is at calc(50% - 155px) */
   top: calc(22% + 0px); /* Adjust the -80px offset as needed */
-  left: calc(50% - 155px + 50px); /* Adjust the -20px offset as needed */
+  left: calc(50% - 155px + 60px); /* Adjust the -20px offset as needed */
   transform: translateX(-100%); /* Position to the left of anchor point */
 }
 
 .couple-dialogue-right {
   /* Anchored to top-right of couple-image */
   /* Right edge of image is at calc(50% + 155px) */
-  top: calc(22% + 0px); /* Adjust the -80px offset as needed */
-  left: calc(50% + 155px - 60px); /* Adjust the +20px offset as needed */
+  top: calc(22% - 20px); /* Adjust the -80px offset as needed */
+  left: calc(50% + 155px - 70px); /* Adjust the +20px offset as needed */
   transform: translateX(0%); /* Position to the right of anchor point */
 }
 
